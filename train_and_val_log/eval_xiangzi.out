@@ -1,0 +1,52 @@
+Namespace(data='data/xiangzi_data.yaml', weights='/home/luwenxuan/project/YOLOv6/runs/train/exp1/weights/best_ckpt.pt', batch_size=32, img_size=640, conf_thres=0.03, iou_thres=0.65, task='val', device='0', half=False, save_dir='runs/val/', name='exp', shrink_size=0, infer_on_rect=True, reproduce_640_eval=False, eval_config_file='./configs/experiment/eval_640_repro.py', do_coco_metric=True, do_pr_metric=False, plot_curve=True, plot_confusion_matrix=False, verbose=False, config_file='', specific_shape=False, height=None, width=None)
+Loading checkpoint from /home/luwenxuan/project/YOLOv6/runs/train/exp1/weights/best_ckpt.pt
+
+Fusing model...
+Switch model to deploy modality.
+Model Summary: Params: 18.53M, Gflops: 45.25
+img record infomation path is:../xiangzi_data/images/.val_cache.json
+Val: Checking formats of labels with 8 process(es): 
+  0%|          | 0/199 [00:00<?, ?it/s]4 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:   2%|▏         | 4/199 [00:00<00:06, 28.55it/s]20 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  10%|█         | 20/199 [00:00<00:01, 91.00it/s]30 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  15%|█▌        | 30/199 [00:00<00:02, 66.58it/s]51 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  26%|██▌       | 51/199 [00:00<00:01, 93.70it/s]61 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  31%|███       | 61/199 [00:00<00:02, 53.71it/s]90 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  45%|████▌     | 90/199 [00:01<00:01, 89.09it/s]112 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  56%|█████▋    | 112/199 [00:01<00:00, 111.17it/s]127 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  64%|██████▍   | 127/199 [00:01<00:00, 94.64it/s] 147 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  74%|███████▍  | 147/199 [00:01<00:00, 111.20it/s]161 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  81%|████████  | 161/199 [00:01<00:00, 106.04it/s]174 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  87%|████████▋ | 174/199 [00:01<00:00, 99.66it/s] 190 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files:  95%|█████████▌| 190/199 [00:02<00:00, 91.81it/s]199 label(s) found, 0 label(s) missing, 0 label(s) empty, 0 invalid label files: 100%|██████████| 199/199 [00:02<00:00, 94.62it/s]
+WARNING: ../xiangzi_data/labels/val/00003571.txt: 0 duplicate labels removed
+Convert to COCO format
+  0%|          | 0/199 [00:00<?, ?it/s]100%|██████████| 199/199 [00:00<00:00, 18091.44it/s]
+Convert to COCO format finished. Resutls saved in ../xiangzi_data/annotations/instances_val.json
+Val: Final numbers of valid images: 199/ labels: 199. 
+17.3s for dataset initialization.
+/home/luwenxuan/project/miniconda3/envs/sr/lib/python3.10/site-packages/torch/utils/data/dataloader.py:560: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 5, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Inferencing model in val datasets.:   0%|                 | 0/7 [00:00<?, ?it/s]Inferencing model in val datasets.:  14%|█▎       | 1/7 [00:05<00:33,  5.56s/it]Inferencing model in val datasets.:  29%|██▌      | 2/7 [00:06<00:12,  2.57s/it]Inferencing model in val datasets.:  43%|███▊     | 3/7 [00:06<00:06,  1.63s/it]Inferencing model in val datasets.:  57%|█████▏   | 4/7 [00:07<00:03,  1.19s/it]Inferencing model in val datasets.:  71%|██████▍  | 5/7 [00:07<00:01,  1.08it/s]Inferencing model in val datasets.:  86%|███████▋ | 6/7 [00:08<00:00,  1.22it/s]Inferencing model in val datasets.: 100%|█████████| 7/7 [00:08<00:00,  1.63it/s]Inferencing model in val datasets.: 100%|█████████| 7/7 [00:08<00:00,  1.19s/it]
+
+Evaluating speed.
+Average pre-process time: 0.08 ms
+Average inference time: 2.96 ms
+Average NMS time: 1.49 ms
+
+Evaluating mAP by pycocotools.
+Saving runs/val/exp1/predictions.json...
+Results saved to runs/val/exp1
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.23s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.52s).
+Accumulating evaluation results...
+DONE (t=0.82s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.570
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.884
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.661
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.564
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.524
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.691
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.635
