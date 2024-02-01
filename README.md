@@ -1,8 +1,9 @@
 # ObjectDetection_program
 whu cs 2023 summer semester project
-1.  We have developed a simple systems for detecting the number of port containers and verification code using YOLOv6
-2. this is only final work for summer training in school of computer Wuhan University, and it is not used for any business situation
-3. the frame YOLOv6 is forked from meituan, and the dataset I used is provided by wuhan fannuo software conpany. Please send me an email to get the dataset if you are interested.
+1. We have developed a simple system for detecting the number of port containers and verification code using YOLOv6.
+2. We used PySide to implement frontend and clustering algorithm to divide letters and numbers.
+3. This is only final work for summer training in school of computer Wuhan University, and it is not used for any business situation.
+4. The frame YOLOv6 is forked from Meituan, and the dataset I used is provided by wuhan fannuo software company. Please send me an email to get the dataset if you are interested.
 
 -——————————————————————-----
 
